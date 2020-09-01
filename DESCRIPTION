@@ -25,4 +25,5 @@ Imports:
     tibble,
     lubridate,
     dplyr,
-    magrittr
+    magrittr,
+    kableExtra
