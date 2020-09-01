@@ -8,7 +8,7 @@ Authors@R:
            email = "lesleymi@uw.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: Forest and trail monitoring programs employ various counting methods 
-	to estimate the visitors to a site. These raw formats with instantanous or 
+	to estimate the visitors to a site. These raw formats with instantaneous or 
 	hourly counts must be transformed into daily counts to be used in downstream 
 	analyses. This package provides function for working with various onsite 
 	counters such as TRAFx Infrared, manual parking lot counts, magnetic vehicle
