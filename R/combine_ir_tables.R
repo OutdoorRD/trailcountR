@@ -8,6 +8,8 @@
 #'
 #' @return A dataframe of IR counter data.
 #'
+#' @import readr
+#'
 #' @export
 #'
 combine_ir_tables <- function(path_to_parsed_ir) {
@@ -22,7 +24,7 @@ combine_ir_tables <- function(path_to_parsed_ir) {
 		# read in a single IR file
 		df <- suppressWarnings(readr::read_csv(paste0(path_to_parsed_ir, file),
 											   col_types =
-											   	cols(
+											   	readr::cols(
 											   		PlacementID = col_character(),
 											   		date = col_character(),
 											   		time = col_time(format = ""),
