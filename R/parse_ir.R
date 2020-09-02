@@ -1,12 +1,12 @@
-#' Parses a raw IR txt file into a csv
+#' Parses a raw IR txt file into a csv.
 #'
 #' @param ir_file Name of raw IR file (do not include the path to file).
 #' @param ir_dir Path to the directory containing raw IR file.
 #' @param parsed_dir Path to directory where parsed csv should be written.
 #' @param dump_dir Path to directory where potentially corrupt files
-#' should be written
+#' should be written.
 #'
-#' @return NULL
+#' @return A parsed csv file.
 #'
 #' @export
 #'
