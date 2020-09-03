@@ -1,12 +1,17 @@
 Package: trailcountR
-Title: Transform Raw Trail Traffic Counter Data 
+Title: Transform Raw Trail Counter Data 
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:c(
+    person(given = "Spencer",
+           family = "Wood",
+           role = c("aut"),
+           email = "spwood@uw.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID")),
     person(given = "Lesley",
            family = "Miller",
            role = c("aut", "cre"),
            email = "lesleymi@uw.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "YOUR-ORCID-ID")))
 Description: Forest and trail monitoring programs employ various counting methods 
 	to estimate the visitors to a site. These raw formats with instantaneous or 
 	hourly counts must be transformed into daily counts to be used in downstream 
@@ -19,6 +24,7 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+BugReports: https://github.com/OutdoorRD/trailcountR/issues
 Suggests: 
     testthat
 Config/reticulate:
