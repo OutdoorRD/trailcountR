@@ -21,6 +21,17 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Suggests: 
     testthat
+Config/reticulate:
+    list(
+    packages= list(
+    list(package = "os"),
+    list(package = "re"), 
+    list(package = "datetime"), 
+    list(package = "shutil"),
+    list(package = "glob"),
+    list(package = "argparse")
+    )
+ )
 Imports: 
     tibble,
     lubridate,
