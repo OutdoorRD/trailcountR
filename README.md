@@ -9,13 +9,14 @@ trailcountR
 
 <!-- badges: end -->
 
-The goal of trailcountR is to make processing raw trail counter data
-easier. Land managers may use a variety of methods to gather visitor
-traffic counts at the trail or forest level. These methods may include
-deploying infrared counters at trail heads (TRAFx), magnetic vehicle
-counters, in-person parking lot counts, cameras and others. These raw
-formats with instantaneous or hourly counts must be transformed into
-daily counts and combined to be used in downstream analyses.
+The goal of **trailcountR** is to make it easier to process visitor
+count data collected in the field. Land managers use a variety of
+methods to gather visitor traffic counts at the trail or forest level.
+These methods may include deploying infrared counters at trail heads
+(TRAFx), magnetic vehicle counters, in-person parking lot counts,
+cameras and others. These raw formats with instantaneous or hourly
+counts must be transformed into daily counts and combined to be used in
+downstream analyses.
 
 ## Installation
 
@@ -27,7 +28,9 @@ You can install the development version from
 devtools::install_github("OutdoorRD/trailcountR")
 ```
 
-## Example 1
+## Code Usage Examples
+
+### Example 1
 
 Once you have parsed IR data for a specific device, the days included
 will only be dates that the device logged a count. If the site had no
@@ -448,7 +451,7 @@ NA
 
 </table>
 
-## Example 2
+### Example 2
 
 Once a complete timeseries has been generated for an IR counter, there
 might be certain days which have missing counts. This could occur when
