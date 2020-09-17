@@ -12,7 +12,7 @@
 #'
 parse_ir <- function(ir_file, ir_dir, parsed_dir, dump_dir) {
 
-	reticulate::source_python("inst/python/parse_ir.py")
+	reticulate::source_python("inst/python/parse_ir.py", envir = globalenv())
 	ir <- parse_ir_to_csv(ir_file = ir_file,
 					ir_dir = ir_dir,
 					parsed_dir = parsed_dir,
