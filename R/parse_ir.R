@@ -1,3 +1,13 @@
+#module <- reticulate::source_python("inst/python/parse_ir.py", envir = globalenv())
+
+.onLoad <- function(libname, pkgname) {
+	reticulate::source_python(system.file("inst/python/parse_ir.py",
+										  package="parse_ir_to_csv"), envir=globalenv())
+}
+
+#path <- system.file("python", package = "<pkg>")
+#module <- reticulate::import_from_path(<module>, path = path)
+
 #' Parses a raw IR txt file into a csv.
 #'
 #' @param ir_file Name of raw IR file (do not include the path to file).
@@ -12,7 +22,6 @@
 #'
 parse_ir <- function(ir_file, ir_dir, parsed_dir, dump_dir) {
 
-	reticulate::source_python("inst/python/parse_ir.py", envir = globalenv())
 	ir <- parse_ir_to_csv(ir_file = ir_file,
 					ir_dir = ir_dir,
 					parsed_dir = parsed_dir,
