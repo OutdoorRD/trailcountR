@@ -1,8 +1,7 @@
 .onLoad <- function(libname, pkgname) {
 	reticulate::source_python(system.file("python",
 										  "parse_ir.py",
-										  package = "trailcountR", mustWork = TRUE),
-							  envir=globalenv())
+										  package = "trailcountR", mustWork = TRUE))
 
 }
 
