@@ -35,9 +35,9 @@ make_complete_timeseries <- function(df) {
 
 	} else {
 		dayseries <- seq(from = start_date, to = df[nrow(df) - 1,"date"]$date, by = "days")
-		print(df)
 		print("WARNING: device improperly recorded download time,
           so final date of operation is taken from the last positive count instead.")
+		print(paste0("PlacementID: ", df$PlacementID[1]))
 	}
 
 	# create new df with full sequence of dates
@@ -46,7 +46,7 @@ make_complete_timeseries <- function(df) {
 	# join the full timeseries to the data
 	newdat <- dplyr::full_join(dfdays, df, by = "date")
 
-	## get the rows with NAs for the placementId
+	## get the rows with NAs for the PlacementID
 	zeros <- which(is.na(newdat$PlacementID))
 
 	# add a placement id for the new inserted rows
