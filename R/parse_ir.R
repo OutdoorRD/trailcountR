@@ -1,18 +1,8 @@
-# .onLoad <- function(libname, pkgname) {
-# 	the_module <- reticulate::import_from_path("parse_ir",
-# 											   system.file("python", "parse_ir.py",
-# 											   			package = "trailcountR",
-# 											   			mustWork = TRUE))
-# 	parse_ir_to_csv <- the_module$parse_ir_to_csv
-#
-# }
-parse_ir <- NULL
-
 .onLoad <- function(libname, pkgname) {
-	the_module <- reticulate::source_python(system.file("python", "parse_ir.py",
-											   			package = "trailcountR",
-											   			mustWork = TRUE))
-	#parse_ir <- the_module$parse_ir
+	reticulate::source_python(system.file("python",
+										  "parse_ir.py",
+										  package = "trailcountR", mustWork = TRUE),
+							  envir=globalenv())
 
 }
 
@@ -32,7 +22,7 @@ parse_ir <- NULL
 #'
 parse_ir <- function(ir_file, ir_dir, parsed_dir, dump_dir) {
 
-	ir <- the_module$parse_ir_to_csv(ir_file = ir_file,
+	ir <- parse_ir_to_csv(ir_file = ir_file,
 					ir_dir = ir_dir,
 					parsed_dir = parsed_dir,
 					dump_dir = dump_dir)
