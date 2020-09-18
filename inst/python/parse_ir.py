@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """Parse TrafX outputs into machine readable tables
 
 This script imports local copies of raw IR files
