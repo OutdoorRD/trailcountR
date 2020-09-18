@@ -1,19 +1,10 @@
-# .onLoad <- function(libname, pkgname) {
-# 	reticulate::source_python(system.file("python",
-# 										  "parse_ir.py",
-# 										  package = "trailcountR", mustWork = TRUE),
-# 							  envir=globalenv())
-#
-# }
+.onLoad <- function(libname, pkgname) {
+	reticulate::source_python(system.file("python",
+										  "parse_ir.py",
+										  package = "trailcountR", mustWork = TRUE),
+							  envir=globalenv())
 
-reticulate::source_python(system.file("python",
-									  "parse_ir.py",
-									  package = "trailcountR", mustWork = TRUE),
-						  envir=globalenv())
-
-
-
-
+}
 
 #' Parses a raw IR txt file into a csv.
 #'
