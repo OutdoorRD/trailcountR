@@ -6,12 +6,13 @@
 # 	parse_ir_to_csv <- the_module$parse_ir_to_csv
 #
 # }
+parse_ir <- NULL
 
 .onLoad <- function(libname, pkgname) {
 	the_module <- reticulate::source_python(system.file("python", "parse_ir.py",
 											   			package = "trailcountR",
 											   			mustWork = TRUE))
-	parse_ir_to_csv <- the_module$parse_ir_to_csv
+	#parse_ir <- the_module$parse_ir
 
 }
 
@@ -31,7 +32,7 @@
 #'
 parse_ir <- function(ir_file, ir_dir, parsed_dir, dump_dir) {
 
-	ir <- parse_ir_to_csv(ir_file = ir_file,
+	ir <- the_module$parse_ir_to_csv(ir_file = ir_file,
 					ir_dir = ir_dir,
 					parsed_dir = parsed_dir,
 					dump_dir = dump_dir)
